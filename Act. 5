@@ -1,0 +1,19 @@
+function f=myfun1(t,Y)
+f=t/Y
+end
+
+function [t,Y]=call_myfun1()
+[tv1 f1] = ode45('myfun1',[0 5],1);
+plot(tv1,f1)
+end
+
+problema 4
+9 lines (7 sloc) 123 Bytes
+function f=myfun1(x,Y)
+f=exp(x)/2*Y
+end
+
+function [x,Y]=call_myfun1()
+[tv1 f1] = ode45('myfun1',[0 5],1);
+plot(tv1,f1)
+end
